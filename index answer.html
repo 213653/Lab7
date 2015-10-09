@@ -1,0 +1,70 @@
+<html>
+<head> Lab7 </head>
+<title> Lab 7 </title>
+<script src="scripts/processing.js"></script>
+<script type="text/processing" data-processing-target="mycanvas">
+
+int X;
+
+
+void setup()
+
+{
+
+	size( 1500, 1500 );
+	frameRate( 30 );
+	X = 2;
+	Z = 1;
+
+}
+
+
+void draw()
+{	
+	background(255,255,255);
+	
+	fill(0,255,0);
+	rect(50,50,250,100);
+	
+	fill(0,0,0);
+	text("press me",150,120);
+	
+	text(X,10,50);
+
+
+	if (mousePressed == true)
+		{
+ 		if (mouseButton == LEFT && Z == 1)
+ 			{	 		
+ 			 	if (mouseX > 50 && mouseX < 300 && mouseY > 50 && mouseY < 100)
+				{
+					X = X + 1;
+					Z = 0;
+				}
+			}
+		}
+			
+			
+				
+	if (mousePressed == false)
+		{
+ 			
+				Z = 1
+				
+			
+		}
+		
+
+
+}
+	
+
+</script>
+<canvas id="mycanvas"></canvas>
+</head>
+
+<body>
+
+</body>
+</html>
+
